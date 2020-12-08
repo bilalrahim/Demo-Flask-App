@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+        <title>Home</title>
+    </head>
+    <body>
+        <h1><center>Flask Web Application</center></h1>
+        <p><center>by {{username}}</center></p>
+        <h3>Tech Stack so far</h3>
+        <ul>
+            {% for place, tech in techstack.items() %}
+            <li>{{place}} : {{tech}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
