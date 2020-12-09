@@ -8,10 +8,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+username = "Bilal"
 @app.route('/')
 #Known as view, because displays what needs to be displayed.
 def home():
-    username = "Bilal"
     techstack = {'backend': 'flask',
                  'frontend' : 'html,css',
                  'Dynamic Rendering' : 'Jinja2'    
@@ -20,6 +20,6 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', username=username)
 if __name__ == "__main__":
     app.run(debug=True, host = '0.0.0.0', port = 3000)

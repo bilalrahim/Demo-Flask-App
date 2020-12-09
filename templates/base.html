@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1><center>Flask Web Application</center></h1>
+            <p><center>by {{username}}</center></p>
+        </div>
+        <div>
+            {%block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
