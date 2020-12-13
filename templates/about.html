@@ -1,10 +1,25 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-About
-{% endblock %}
+<head>
 
-{% block content %}
-<h1>About</h1>
-<p>A web application developed using Flask, a Microframework for python.</p>
-{% endblock %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <img src="{{url_for('static', filename = 'abstract.jpg')}}" alt="background"> 
+
+    <div class="container" id="glass">
+        <h2 class="seq">Hello everyone</h2>
+        <p class="seq">Lets get ahead.</p>
+    </div>
+
+    <h1>Glassporphisim Realized</h1>
+
+</body>
+</html>

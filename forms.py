@@ -20,8 +20,18 @@ class LoginForm(FlaskForm):
 
     email = StringField("Email", validators=[InputRequired()])
     password = PasswordField("Password", validators=[InputRequired()])
+    
     submit = SubmitField("Login")
 # we will make instances of these classes as member variables of our class, 
 # and we will pass the labels of these fields as input to the constructors
+
+
+#Class for signup form.
+
+class SignupForm(FlaskForm):
+    password = PasswordField("Password", validators = [InputRequired()])
+    username = StringField("Email", validators =[InputRequired()])
+    
+    submit = SubmitField('Sign up')
 
     

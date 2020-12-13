@@ -4,12 +4,23 @@
 Home
 {% endblock %}
 
+{%block heading%} Web with Flask {% endblock %}
+
 {% block content %}
+
+<h2 class="seq"></h2>
+<p class="seq">A Micro Web Framework.</p>
+
+{% endblock %}
+
+
+{#}
 <h3>Tech Stack so far</h3>
 <ul>
     {% for place, tech in techstack.items() %}
     <li>{{place}} : {{tech}}</li>
     {% endfor %}
 </ul>
-{% endblock %}
-       
+
+{#}
+     

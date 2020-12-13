@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
-        <title>{% block title %} {% endblock %}</title>
-    </head>
-    <body>
-        <div>
+
+   {#}     <div>
             <ul>
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="{{url_for('login')}}">Login</a></li>
@@ -20,4 +14,42 @@
             {% endblock %}
         </div>
     </body>
+</html>
+{#}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  {% endblock %}</title>
+
+</head>
+
+<body>
+    <div>
+        <ul style="list-style-type: none;float: right;font-size: large;">
+            <li style="display:inline"><a href="{{url_for('about')}}">About</a></li>
+            {% if 'user' in session %}
+            <li style="display:inline"><a href="{{url_for('logout')}}">Log Out</a></li>
+            <li style="display:inline"><a href="{{url_for('home')}}">Home</a></li>
+            {% else %}
+            <li style="display:inline"><a href="{{url_for('signup')}}">Sign Up</a></li>
+            <li style="display:inline"><a href="{{url_for('login')}}">Login</a></li>
+            {% endif%}
+        </ul>
+    </div>
+
+    <img src="{{url_for('static', filename = 'abstract.jpg')}}" alt="background"> 
+
+    <h1>{% block heading%}{% endblock %}</h1>
+    
+    <div class="container" id="glass">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
 </html>
