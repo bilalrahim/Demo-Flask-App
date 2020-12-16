@@ -3,7 +3,6 @@
 
 #imp note, if changes in css file are not updated in browser. Do full relod in browser (relod + holding shift)
 
-from flask import request
 from flask import Flask, render_template
 from flask import session, redirect, url_for
 
